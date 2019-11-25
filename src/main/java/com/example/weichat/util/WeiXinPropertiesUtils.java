@@ -1,5 +1,6 @@
 package com.example.weichat.util;
 
+import com.example.weichat.config.ApplicationContextRegister;
 import com.example.weichat.config.WxMiniProperties;
 import org.springframework.web.context.ContextLoader;
 
@@ -11,7 +12,7 @@ public class WeiXinPropertiesUtils {
     private static WxMiniProperties miniProperties;
     private static void init() {
         if(miniProperties == null) {
-            miniProperties = ContextLoader.getCurrentWebApplicationContext().getBean(WxMiniProperties.class);
+            miniProperties = ApplicationContextRegister.getApplicationContext() .getBean(WxMiniProperties.class);
         }
     }
 

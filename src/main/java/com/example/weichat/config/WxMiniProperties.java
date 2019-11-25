@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  */
 @Data
 @Component
-@ConfigurationProperties(prefix = "luwei.model.wx-mini")
+@ConfigurationProperties(prefix = "wx-mini")
 public class WxMiniProperties {
 
     private String appId;
